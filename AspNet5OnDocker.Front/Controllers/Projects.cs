@@ -18,7 +18,8 @@ namespace AspNet5OnDocker.Front.Controllers
 		{
 			_httpClient = new HttpClient();
 
-			var serviceUrl = "http://localhost:50001";
+			//var serviceUrl = "http://localhost:50001";
+			var serviceUrl = "http://backend:50001";
 			_apiUrl = serviceUrl + "/projects";
 		}
 

@@ -1,0 +1,9 @@
+frontend:
+  build: AspNet5OnDocker.Front/
+  ports:
+    - "80:50000"
+  links:
+    - backend
+
+backend:
+  build: AspNet5OnDocker.Back/
