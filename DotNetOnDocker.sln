@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiOnDocker.Front", "WebApiOnDocker.Front\WebApiOnDocker.Front.csproj", "{64474968-9B12-4B9A-AFFE-944C15CF2585}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{4CA69294-5CAF-49C3-ABD9-B7E80A57E38B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET Framework 4.6", ".NET Framework 4.6", "{2B5357D1-2A0A-4EA6-A491-6EC61983B30E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET Core", ".NET Core", "{515CA858-9C5E-466B-AC17-DEFA81867814}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNet5OnDocker.Front", "AspNet5OnDocker.Front\AspNet5OnDocker.Front.xproj", "{37546C32-3861-4DA5-AC33-138C4ACE9B70}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNet5OnDocker.Back", "AspNet5OnDocker.Back\AspNet5OnDocker.Back.xproj", "{E8D77BCF-45C4-4382-98CB-DC40DCB437AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64474968-9B12-4B9A-AFFE-944C15CF2585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64474968-9B12-4B9A-AFFE-944C15CF2585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64474968-9B12-4B9A-AFFE-944C15CF2585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64474968-9B12-4B9A-AFFE-944C15CF2585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA69294-5CAF-49C3-ABD9-B7E80A57E38B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA69294-5CAF-49C3-ABD9-B7E80A57E38B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA69294-5CAF-49C3-ABD9-B7E80A57E38B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA69294-5CAF-49C3-ABD9-B7E80A57E38B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37546C32-3861-4DA5-AC33-138C4ACE9B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37546C32-3861-4DA5-AC33-138C4ACE9B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37546C32-3861-4DA5-AC33-138C4ACE9B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37546C32-3861-4DA5-AC33-138C4ACE9B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8D77BCF-45C4-4382-98CB-DC40DCB437AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8D77BCF-45C4-4382-98CB-DC40DCB437AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8D77BCF-45C4-4382-98CB-DC40DCB437AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8D77BCF-45C4-4382-98CB-DC40DCB437AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64474968-9B12-4B9A-AFFE-944C15CF2585} = {2B5357D1-2A0A-4EA6-A491-6EC61983B30E}
+		{37546C32-3861-4DA5-AC33-138C4ACE9B70} = {515CA858-9C5E-466B-AC17-DEFA81867814}
+		{E8D77BCF-45C4-4382-98CB-DC40DCB437AD} = {515CA858-9C5E-466B-AC17-DEFA81867814}
+	EndGlobalSection
+EndGlobal

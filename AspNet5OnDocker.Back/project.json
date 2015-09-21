@@ -1,0 +1,32 @@
+﻿{
+	"version": "1.0.0-*",
+
+	"dependencies": {
+		"Microsoft.AspNet.Mvc": "6.0.0-beta7",
+		"Microsoft.AspNet.Server.Kestrel": "1.0.0-beta7",
+		"Microsoft.AspNet.StaticFiles": "1.0.0-beta7",
+		"EntityFramework.InMemory": "7.0.0-beta7"
+	},
+
+	"commands": {
+		"web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --server.urls http://localhost:50001"
+	},
+
+	"frameworks": {
+		"dnx451": { },
+		"dnxcore50": { }
+	},
+
+	"exclude": [
+		"wwwroot",
+		"node_modules",
+		"bower_components"
+	],
+	"publishExclude": [
+		"node_modules",
+		"bower_components",
+		"**.xproj",
+		"**.user",
+		"**.vspscc"
+	]
+}
