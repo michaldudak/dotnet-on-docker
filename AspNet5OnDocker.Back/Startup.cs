@@ -23,23 +23,10 @@ namespace AspNet5OnDocker.Back
 		{
 			app.Use(async (ctx, next) =>
 			{
-				Console.WriteLine($"{DateTime.Now}: {ctx.Request.Method} {ctx.Request.Path.Value}");
-				try
-				{
-					await next();
-				}
-
-				catch (Exception ex)
-				{
-					Console.WriteLine(ex.ToString());
-					throw;
-				}
+				await next();
+				Console.WriteLine($"{DateTime.Now}: {ctx.Request.Method} {ctx.Request.Path.Value}: {ctx.Response.StatusCode}");
 			});
 
-			// Configure the HTTP request pipeline.
-			app.UseStaticFiles();
-
-			// Add MVC to the request pipeline.
 			app.UseMvc();
 		}
 	}

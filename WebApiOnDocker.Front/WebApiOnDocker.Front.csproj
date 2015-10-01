@@ -207,12 +207,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dockerfile" />
     <Content Include="wwwroot\css\bootstrap.min.css" />
-    <Content Include="wwwroot\index.html" />
     <Content Include="wwwroot\js\angular.min.js" />
     <Content Include="wwwroot\js\app.js" />
+    <None Include="Dockerfile" />
+    <Content Include="wwwroot\index.html" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
