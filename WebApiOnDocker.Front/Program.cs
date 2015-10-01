@@ -7,7 +7,7 @@ namespace WebApiOnDocker.Front
 	{
 		private static void Main(string[] args)
 		{
-			const string baseAddress = "http://+:9000/";
+			const string baseAddress = "http://+:50005/";
 			using (WebApp.Start<Startup>(baseAddress))
 			{
 				Console.WriteLine($"Server up and running on {baseAddress}");

@@ -9,43 +9,43 @@ using Microsoft.Data.Entity;
 namespace WebApiOnDocker.Front.Controllers
 {
 	[Route("[controller]")]
-	public class ProjectsController : ApiController
+	public class TodosController : ApiController
 	{
 		private readonly MyContext _ctx;
 
-		public ProjectsController()
+		public TodosController()
 		{
 			_ctx = new MyContext();
 		}
 
 		[HttpGet]
-		public async Task<IEnumerable<Project>> Get()
+		public async Task<IEnumerable<Todo>> Get()
 		{
-			return await _ctx.Projects.ToListAsync();
+			return await _ctx.Todos.ToListAsync();
 		}
 
 		[HttpGet]
 		[Route("{id}")]
-		public async Task<Project> Get(int id)
+		public async Task<Todo> Get(int id)
 		{
-			return await _ctx.Projects.FirstOrDefaultAsync(p => p.Id == id);
+			return await _ctx.Todos.FirstOrDefaultAsync(p => p.Id == id);
 		}
 
 		[HttpPost]
-		public async Task<HttpResponseMessage> Post(Project project)
+		public async Task<HttpResponseMessage> Post(Todo todo)
 		{
-			_ctx.Projects.Add(project);
+			_ctx.Todos.Add(todo);
 			await _ctx.SaveChangesAsync();
 			return Request.CreateResponse(HttpStatusCode.Created);
 		}
 
 		[HttpPut]
 		[Route("{id}")]
-		public async Task Put(int id, Project project)
+		public async Task Put(int id, Todo todo)
 		{
-			var oldProject = await Get(id);
-			oldProject.Title = project.Title;
-			oldProject.Url = project.Url;
+			var oldTodo = await Get(id);
+			oldTodo.Task = todo.Task;
+			oldTodo.IsCompleted = todo.IsCompleted;
 
 			await _ctx.SaveChangesAsync();
 		}
@@ -55,7 +55,9 @@ namespace WebApiOnDocker.Front.Controllers
 		public async Task Delete(int id)
 		{
 			var toRemove = await Get(id);
-			_ctx.Projects.Remove(toRemove);
+			_ctx.Todos.Remove(toRemove);
+
+			await _ctx.SaveChangesAsync();
 		}
 	}
 }

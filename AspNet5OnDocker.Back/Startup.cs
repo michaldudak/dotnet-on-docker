@@ -1,8 +1,9 @@
 ﻿using System;
-using System.IO;
+using System.Linq;
 using DotNetOnDocker.Model;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Server.Kestrel;
 using Microsoft.Framework.DependencyInjection;
 
 namespace AspNet5OnDocker.Back
@@ -28,6 +29,8 @@ namespace AspNet5OnDocker.Back
 			});
 
 			app.UseMvc();
+
+			Console.WriteLine($"Listening on port {((ServerInformation)app.Server).Addresses.First().Port}");
 		}
 	}
 }

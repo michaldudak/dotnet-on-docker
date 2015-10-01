@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Mvc.WebApiCompatShim;
+using Microsoft.AspNet.Server.Kestrel;
 using Microsoft.AspNet.StaticFiles;
 using Microsoft.Framework.DependencyInjection;
 
@@ -25,13 +27,15 @@ namespace AspNet5OnDocker.Front
 				Console.WriteLine($"{DateTime.Now}: {ctx.Request.Method} {ctx.Request.Path.Value}: {ctx.Response.StatusCode}");
 			});
 
-			app.UseErrorPage();
-			app.UseMvc();
-
 			app.UseFileServer(new FileServerOptions
 			{
 				EnableDirectoryBrowsing = false
 			});
+			
+			app.UseErrorPage();
+			app.UseMvc();
+
+			Console.WriteLine($"Listening on port {((ServerInformation)app.Server).Addresses.First().Port}");
 		}
 	}
 }

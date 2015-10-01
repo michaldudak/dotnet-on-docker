@@ -8,40 +8,40 @@ using Microsoft.Data.Entity;
 namespace AspNet5OnDocker.Back.Controllers
 {
 	[Route("[controller]")]
-	public class ProjectsController : Controller
+	public class TodosController : Controller
 	{
 		private readonly MyContext _ctx;
 
-		public ProjectsController(MyContext ctx)
+		public TodosController(MyContext ctx)
 		{
 			_ctx = ctx;
 		}
 
 		[HttpGet]
-		public async Task<IEnumerable<Project>> Get()
+		public async Task<IEnumerable<Todo>> Get()
 		{
-			return await _ctx.Projects.ToListAsync();
+			return await _ctx.Todos.ToListAsync();
 		}
 
 		[HttpGet("{id}")]
-		public async Task<Project> Get(int id)
+		public async Task<Todo> Get(int id)
 		{
-			return await _ctx.Projects.FirstOrDefaultAsync(p => p.Id == id);
+			return await _ctx.Todos.FirstOrDefaultAsync(p => p.Id == id);
 		}
 
 		[HttpPost]
-		public async Task Post([FromBody]Project project)
+		public async Task Post([FromBody]Todo todo)
 		{
-			_ctx.Projects.Add(project);
+			_ctx.Todos.Add(todo);
 			await _ctx.SaveChangesAsync();
 		}
 
 		[HttpPut("{id}")]
-		public async Task Put(int id, Project project)
+		public async Task Put(int id, [FromBody]Todo todo)
 		{
-			var oldProject = await Get(id);
-			oldProject.Title = project.Title;
-			oldProject.Url = project.Url;
+			var oldTodo = await Get(id);
+			oldTodo.Task = todo.Task;
+			oldTodo.IsCompleted = todo.IsCompleted;
 
 			await _ctx.SaveChangesAsync();
 		}
@@ -50,7 +50,9 @@ namespace AspNet5OnDocker.Back.Controllers
 		public async Task Delete(int id)
 		{
 			var toRemove = await Get(id);
-			_ctx.Projects.Remove(toRemove);
+			_ctx.Todos.Remove(toRemove);
+
+			await _ctx.SaveChangesAsync();
 		}
 	}
 }

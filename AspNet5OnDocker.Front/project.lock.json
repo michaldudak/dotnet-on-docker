@@ -5675,7 +5675,7 @@
     "System.Diagnostics.Process/4.0.0-beta-23225": {
       "type": "package",
       "serviceable": true,
-      "sha512": "Pt6QAiXPNKIobDWHcNqX/wz6+YaTqqxw7f245sX1lz4rZxCmGwlUI0yhV/fXXvT7iPJRDLXSEXTnS3F8GsxK9g==",
+      "sha512": "yBIP0ts5Msh3QoiaseqPrc6Sh4e3t3iR9Spd7aVrfJZqUtq0cX96txwL+K/1R594IgN53I2hKpmLhHdWVRk1qA==",
       "files": [
         "lib/DNXCore50/System.Diagnostics.Process.dll",
         "lib/MonoAndroid10/_._",
@@ -6258,7 +6258,7 @@
     "System.Private.DataContractSerialization/4.0.1-beta-23225": {
       "type": "package",
       "serviceable": true,
-      "sha512": "a360susOCz18dW/TSB4MqeoQnZZ23EeKatBZBSMUJVLcqhOqJZGNyLVnEbn4+G1Jrsqtt5fOwTXOu6x1WItEjg==",
+      "sha512": "+oYOphaXM3HuBi1eGCKtGXP09K9sBmT9EgJUASTTVuzuwkhB8TIySBZmdGJMOgQOwv0bRYXJV0sYfv+nyNZWJA==",
       "files": [
         "lib/DNXCore50/System.Private.DataContractSerialization.dll",
         "lib/netcore50/System.Private.DataContractSerialization.dll",
@@ -6914,7 +6914,7 @@
     "System.Runtime.Serialization.Primitives/4.0.11-beta-23225": {
       "type": "package",
       "serviceable": true,
-      "sha512": "uOoT8lH3IoZI8AsyXkn/itZI4MBzykjIWqTVWSWsP0/l0EpBSRejd5Vja+wJRAg4vw0qA26ULlA9smPDMeWjCw==",
+      "sha512": "qQugk6X0skRwRkSAXnqKqgpKitTXYtetdW14cOO571RzAd36LyEpcjVsGC2j+x9Zxw2xz5Q+zQDEUFzq8GI5Sg==",
       "files": [
         "lib/dotnet/System.Runtime.Serialization.Primitives.dll",
         "lib/MonoAndroid10/_._",
@@ -6936,7 +6936,7 @@
     "System.Runtime.Serialization.Xml/4.0.11-beta-23225": {
       "type": "package",
       "serviceable": true,
-      "sha512": "02kmgAaW8lEUQQlNDZbf77VZCbF/BJVqz1Ehgd6cxn4leYATjCDC4r3CDb4kNcPtuzLrX2DvUtYNw6w9t5oC5g==",
+      "sha512": "YMHcuzu9l5kojlkhXOR7y51u2+9+TjOUMqXNkW+Zijxmr68j3ppGvC+pxaKNuBAtBTlehpyDdE9pOVL/0tjEYA==",
       "files": [
         "lib/DNXCore50/System.Runtime.Serialization.Xml.dll",
         "lib/MonoAndroid10/_._",
@@ -7128,7 +7128,7 @@
     "System.Security.SecureString/4.0.0-beta-23225": {
       "type": "package",
       "serviceable": true,
-      "sha512": "fWZiVly2v05MLJFbtJBwThJmSQAh1slsEUqVxjy/K58RWHN8ar8BNz/1h318eHNd5vcTA7155awMNNMzY/Cbag==",
+      "sha512": "yeh8SaUJQx7BsyqntzyU0jnnKso5US6QX2g6eHBLC1MRb7swwFb12Bd4N7RwSslEaj6LLWzFKb4Lw8AMaWfXbA==",
       "files": [
         "lib/DNXCore50/System.Security.SecureString.dll",
         "lib/MonoAndroid10/_._",
@@ -7587,7 +7587,7 @@
     "System.Xml.XmlSerializer/4.0.11-beta-23225": {
       "type": "package",
       "serviceable": true,
-      "sha512": "NH0SFP/HXHyunxEUnTyh8Gt4S2snXqKNh7fBOhlZm/H7mHwI+k3DSSaPLRPo8HcX/maH9EbKZIz3eYY6gTmPDA==",
+      "sha512": "8gGUxwU5R4hXO0tiD6O67P9Wqk2Z4hUDj2jhK0oHeEURldEqqe9Ivb543lJ8ysOWCJszex7zevCfdzQ0j+kXHQ==",
       "files": [
         "lib/DNXCore50/System.Xml.XmlSerializer.dll",
         "lib/MonoAndroid10/_._",

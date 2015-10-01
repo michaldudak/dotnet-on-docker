@@ -8,7 +8,7 @@ namespace DotNetOnDocker.Model
 {
 	public class MyContext : DbContext
 	{
-		public DbSet<Project> Projects { get; set; }
+		public DbSet<Todo> Todos { get; set; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{

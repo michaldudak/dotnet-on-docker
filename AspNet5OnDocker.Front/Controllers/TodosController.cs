@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -8,18 +6,18 @@ using Microsoft.AspNet.Mvc;
 
 namespace AspNet5OnDocker.Front.Controllers
 {
-	[Route("api/projects")]
-	public class ProjectsController : Controller
+	[Route("api/todos")]
+	public class TodosController : Controller
 	{
 		private readonly string _apiUrl;
 		private readonly HttpClient _httpClient;
 
-		public ProjectsController()
+		public TodosController()
 		{
 			_httpClient = new HttpClient();
 
 			var serviceUrl = "http://backend:50001";
-			_apiUrl = serviceUrl + "/projects";
+			_apiUrl = serviceUrl + "/todos";
 		}
 
 		[HttpGet]
@@ -46,7 +44,9 @@ namespace AspNet5OnDocker.Front.Controllers
 		[HttpPut("{id}")]
 		public async Task<HttpResponseMessage> Put(int id)
 		{
-			return await _httpClient.PutAsync(_apiUrl + "/" + id, new StreamContent(Request.Body));
+			var content = new StreamContent(Request.Body);
+			content.Headers.ContentType = MediaTypeHeaderValue.Parse(Request.Headers["Content-Type"]);
+			return await _httpClient.PutAsync(_apiUrl + "/" + id, content);
 		}
 
 		[HttpDelete("{id}")]
