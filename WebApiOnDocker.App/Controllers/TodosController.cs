@@ -6,7 +6,7 @@ using System.Web.Http;
 using DotNetOnDocker.Model;
 using Microsoft.Data.Entity;
 
-namespace WebApiOnDocker.Front.Controllers
+namespace WebApiOnDocker.App.Controllers
 {
 	[Route("[controller]")]
 	public class TodosController : ApiController

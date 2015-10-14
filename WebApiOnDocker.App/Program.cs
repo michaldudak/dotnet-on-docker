@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Owin.Hosting;
 
-namespace WebApiOnDocker.Front
+namespace WebApiOnDocker.App
 {
 	class Program
 	{
