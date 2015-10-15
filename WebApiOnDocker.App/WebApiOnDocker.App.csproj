@@ -182,10 +182,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\AspNet5OnDocker.Back\Model\MyContext.cs">
+    <Compile Include="..\DotNetOnDocker.Model\MyContext.cs">
       <Link>Model\MyContext.cs</Link>
     </Compile>
-    <Compile Include="..\AspNet5OnDocker.Back\Model\Todo.cs">
+    <Compile Include="..\DotNetOnDocker.Model\Todo.cs">
       <Link>Model\Todo.cs</Link>
     </Compile>
     <Compile Include="Controllers\TodosController.cs" />
@@ -226,7 +226,6 @@
     <None Include="Dockerfile" />
     <Content Include="wwwroot\index.html" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

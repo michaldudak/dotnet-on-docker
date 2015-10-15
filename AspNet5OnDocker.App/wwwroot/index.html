@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ASP.NET 5 / .NET Core application</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<style>
+		td {
+			vertical-align: middle !important;
+		}
+
+		td:last-child {
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container" ng-app="app" ng-controller="todosController">
+		<h1>ASP.NET 5 / .NET Core application</h1>
+
+		<table class="table table-striped">
+			<tbody>
+				<tr ng-repeat="todo in todos">
+					<td>
+						<status-marker todo="todo"></status-marker>
+					</td>
+					<td>{{todo.Task}}</td>
+					<td>
+						<state-change-button todo="todo" ng-click="update(todo)"></state-change-button>
+						<button class="btn btn-danger" ng-click="remove(todo)"><i class="fa fa-trash-o fa-lg"></i></button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			<h2>New task</h2>
+			<div class="row">
+				<form ng-submit="save()">
+					<div class="col-sm-8">
+						<input class="form-control" ng-model="newTodo.Task" placeholder="what would you like to do?" />
+					</div>
+					<div class="col-sm-4">
+						<button class="btn btn-primary btn-block">Save</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
