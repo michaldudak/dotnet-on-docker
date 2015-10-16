@@ -2,6 +2,7 @@
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using Microsoft.Framework.Configuration;
 
 namespace AspNet5OnDocker.Front.Controllers
 {
@@ -11,11 +12,11 @@ namespace AspNet5OnDocker.Front.Controllers
 		private readonly string _apiUrl;
 		private readonly HttpClient _httpClient;
 
-		public TodosController()
+		public TodosController(IConfiguration config)
 		{
 			_httpClient = new HttpClient();
 
-			var serviceUrl = "http://backend:50001";
+			var serviceUrl = config["backendUri"];
 			_apiUrl = serviceUrl + "/todos";
 		}
 

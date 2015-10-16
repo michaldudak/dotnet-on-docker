@@ -4,3 +4,7 @@ obj
 .user
 .suo
 packages
+.lock.json
+AspNet5OnDocker.Back/Properties/PublishProfiles/
+AspNet5OnDocker.Front/Properties/PublishProfiles/
+PublishScripts/

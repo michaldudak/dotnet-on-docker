@@ -1,11 +1,7 @@
-FROM microsoft/aspnet
+FROM windowsservercore
 
-RUN mkdir ~/app
-WORKDIR ~/app
+ADD . /app
 
-ADD . .
-RUN dnu restore
+WORKDIR /app
 
-EXPOSE 50001
-
-ENTRYPOINT ["dnx", "web"]
+ENTRYPOINT ["cmd", "/k", "web.cmd"]

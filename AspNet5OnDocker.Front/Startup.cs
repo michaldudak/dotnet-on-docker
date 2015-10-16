@@ -5,6 +5,7 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Mvc.WebApiCompatShim;
 using Microsoft.AspNet.Server.Kestrel;
 using Microsoft.AspNet.StaticFiles;
+using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 
 namespace AspNet5OnDocker.Front
@@ -13,6 +14,13 @@ namespace AspNet5OnDocker.Front
 	{
 		public void ConfigureServices(IServiceCollection services)
 		{
+			var configBuilder = new ConfigurationBuilder();
+			configBuilder.AddEnvironmentVariables();
+
+			IConfiguration config = configBuilder.Build();
+
+			services.AddSingleton<IConfiguration>(s => config);
+
 			services.AddMvc(options =>
 			{
 				options.OutputFormatters.Insert(0, new HttpResponseMessageOutputFormatter());
