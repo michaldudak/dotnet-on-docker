@@ -1,7 +1,6 @@
 FROM windowsservercore
 
-RUN mkdir \app
+ADD . \app
 WORKDIR \app
 
-ADD . .
 ENTRYPOINT bin\Debug\WebApiOnDocker.App.exe

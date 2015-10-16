@@ -1,8 +1,7 @@
 FROM microsoft/aspnet
 
-RUN mkdir ~/app
-WORKDIR ~/app
-ADD . .
+ADD . /app
+WORKDIR /app
 
 RUN dnu restore
 

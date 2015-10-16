@@ -15,10 +15,11 @@
     },
 
     "commands": {
-        "kestrel": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --server.urls http://localhost:50000"
+        "kestrel": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --server.urls http://localhost:80"
     },
 
     "frameworks": {
+        "dnx451": { },
         "dnxcore50": { }
     },
 

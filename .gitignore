@@ -8,3 +8,4 @@ packages
 AspNet5OnDocker.Back/Properties/PublishProfiles/
 AspNet5OnDocker.Front/Properties/PublishProfiles/
 PublishScripts/
+project.lock.json
